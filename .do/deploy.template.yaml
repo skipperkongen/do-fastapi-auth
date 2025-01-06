@@ -1,0 +1,7 @@
+spec:
+  name: do-fastapi-auth
+  services:
+  - name: api
+    git:
+      branch: main
+      repo_clone_url: https://github.com/skipperkongen/do-fastapi-auth.git
