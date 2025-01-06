@@ -1,7 +1,8 @@
 spec:
   name: do-fastapi-auth
   services:
-  - name: api
+  - dockerfile_path: Dockerfile
     git:
       branch: main
       repo_clone_url: https://github.com/skipperkongen/do-fastapi-auth.git
+    name: do-fastapi-auth

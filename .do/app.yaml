@@ -1,8 +1,8 @@
 name: do-fastapi-auth
 services:
-- name: api
-  dockerfile_path: Dockerfile
+- dockerfile_path: Dockerfile
   github:
-    repo: skipperkongen/do-fastapi-auth
     branch: main
     deploy_on_push: true
+    repo: skipperkongen/do-fastapi-auth
+  name: do-fastapi-auth
