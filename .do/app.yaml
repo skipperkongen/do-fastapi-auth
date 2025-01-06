@@ -1,0 +1,6 @@
+name: do-fastapi-auth
+services:
+- name: api
+  github:
+    repo: skipperkongen/do-fastapi-auth
+    branch: main
