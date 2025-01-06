@@ -1,7 +1,26 @@
-name: do-fastapi-auth
+alerts:
+- rule: DEPLOYMENT_FAILED
+- rule: DOMAIN_FAILED
+features:
+- buildpack-stack=ubuntu-22
+ingress:
+  rules:
+  - component:
+      name: do-fastapi-auth
+    match:
+      path:
+        prefix: /
+name: orca-app
+region: ams
 services:
+- environment_slug: python
   github:
     branch: main
     deploy_on_push: true
     repo: skipperkongen/do-fastapi-auth
-  name: api
+  http_port: 8000
+  instance_count: 1
+  instance_size_slug: apps-s-1vcpu-0.5gb
+  name: do-fastapi-auth
+  run_command: fastapi run
+  source_dir: /
