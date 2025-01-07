@@ -35,7 +35,7 @@ services:
 static_sites:
 - environment_slug: html
   github:
-    branch: master
+    branch: main
     deploy_on_push: true
     repo: skipperkongen/do-fastapi-simple
   name: website
