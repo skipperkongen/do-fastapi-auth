@@ -11,7 +11,7 @@ ingress:
       name: api
     match:
       path:
-        prefix: /api
+        prefix: /api/v1
   - component:
       name: website
     cors:
@@ -30,7 +30,7 @@ services:
   instance_count: 1
   instance_size_slug: apps-s-1vcpu-0.5gb
   name: api
-  run_command: fastapi run
+  run_command: fastapi run main.py --root-path /api/v1
   source_dir: /backend
 static_sites:
 - environment_slug: html
@@ -39,4 +39,6 @@ static_sites:
     deploy_on_push: true
     repo: skipperkongen/do-fastapi-simple
   name: website
-  source_dir: /frontend
+  source_dir: /frontend/
+  build_command: npm install && npm run build
+  output_dir: /dist
