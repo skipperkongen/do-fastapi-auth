@@ -23,7 +23,7 @@ ingress:
 services:
 - environment_slug: python
   github:
-    branch: main
+    branch: dev
     deploy_on_push: true
     repo: skipperkongen/do-fastapi-simple
   http_port: 8000
@@ -35,8 +35,10 @@ services:
 static_sites:
 - environment_slug: html
   github:
-    branch: main
+    branch: dev
     deploy_on_push: true
     repo: skipperkongen/do-fastapi-simple
   name: website
-  source_dir: /frontend
+  source_dir: /frontend/
+  build_command: cd frontend && npm install && npm run build
+  output_dir: /frontend/dist

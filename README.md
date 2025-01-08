@@ -6,7 +6,6 @@ Click [here](https://cloud.digitalocean.com/apps/github/install) to grant Digita
 
 [![Deploy to DigitalOcean](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/skipperkongen/do-fastapi-auth/tree/main)
 
-Authentication implement by following the [security tutorial](https://fastapi.tiangolo.com/tutorial/security/) on the FastAPI homepage.
 
 ## Run locally
 
@@ -37,4 +36,18 @@ After code changes
 ```shell
 # on main branch (TODO: setup pull request restriction to main)
 git commit -am 'updated code'; git push
+```
+
+## How the code was generated
+
+
+### Backend
+
+Authentication in backend implement by following the [security tutorial](https://fastapi.tiangolo.com/tutorial/security/) on the FastAPI homepage.
+
+### Frontend
+
+```shell
+cd frontend
+npm create vue@latest .
 ```
