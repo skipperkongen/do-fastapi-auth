@@ -1,4 +1,4 @@
-name: do-fastapi-simple-dev
+name: do-fastapi-simple
 region: ams
 alerts:
 - rule: DEPLOYMENT_FAILED
@@ -23,7 +23,7 @@ ingress:
 services:
 - environment_slug: python
   github:
-    branch: dev
+    branch: main
     deploy_on_push: true
     repo: skipperkongen/do-fastapi-simple
   http_port: 8000
@@ -35,7 +35,7 @@ services:
 static_sites:
 - environment_slug: html
   github:
-    branch: dev
+    branch: main
     deploy_on_push: true
     repo: skipperkongen/do-fastapi-simple
   name: website
